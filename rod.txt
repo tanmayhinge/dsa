@@ -152,4 +152,15 @@
 0 0 5 10 10 15 20 20 25 30 30 
 0 0 5 10 10 15 20 20 25 30 30 
 
+Optimal sizes and decompositions:
+Rod length 1: Optimal Size: 1, Decomposition: 1 
+Rod length 2: Optimal Size: 2, Decomposition: 2 
+Rod length 3: Optimal Size: 3, Decomposition: 3 
+Rod length 4: Optimal Size: 2, Decomposition: 2 
+Rod length 5: Optimal Size: 3, Decomposition: 3 
+Rod length 6: Optimal Size: 3, Decomposition: 3 
+Rod length 7: Optimal Size: 3, Decomposition: 3 
+Rod length 8: Optimal Size: 3, Decomposition: 3 
+Rod length 9: Optimal Size: 3, Decomposition: 3 
+Rod length 10: Optimal Size: 3, Decomposition: 3 
 30
