@@ -37,6 +37,7 @@ int rod_cutting(int arr[], int n)
     int matrix[11][11] = {0};
     vector<vector<int> > sizes(11, vector<int>(11, 0));
     vector<vector<int> > decompositions(11, vector<int>(11, 0));
+    vector<int> optimalRevenue(11, 0);
 
     for (int i = 0; i <= n; i++)
     {
@@ -82,9 +83,14 @@ int rod_cutting(int arr[], int n)
                 }
             }
         }
+                optimalRevenue[i] = matrix[i][i];
+
         printMatrix(matrix);
     }
-
+    cout << "Optimal revenues for rod lengths 1 to " << n << ":\n";
+    for (int i = 1; i <= n; ++i) {
+        cout << "Rod length " << i << ": " << optimalRevenue[i] << endl;
+    }
     printOptimalCut(sizes, decompositions, n);
 
     return matrix[n][n];

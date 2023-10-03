@@ -152,6 +152,17 @@
 0 0 5 10 10 15 20 20 25 30 30 
 0 0 5 10 10 15 20 20 25 30 30 
 
+Optimal revenues for rod lengths 1 to 10:
+Rod length 1: 0
+Rod length 2: 5
+Rod length 3: 10
+Rod length 4: 10
+Rod length 5: 15
+Rod length 6: 20
+Rod length 7: 20
+Rod length 8: 25
+Rod length 9: 30
+Rod length 10: 30
 Optimal sizes and decompositions:
 Rod length 1: Optimal Size: 1, Decomposition: 1 
 Rod length 2: Optimal Size: 2, Decomposition: 2 
