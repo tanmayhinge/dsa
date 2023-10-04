@@ -1,0 +1,19 @@
+Step 1 - Ratios:
+25/18=1.38889
+24/15=1.6
+15/10=1.5
+35/13=2.69231
+
+Step2 - Sorting the ratios in descending order:
+2.69231
+1.6
+1.5
+1.38889
+
+Item with val 35: Proportion = 1, Weight = 13, Value Contribution = 35
+
+Item with val 24: Proportion = 1, Weight = 15, Value Contribution = 24
+
+Item with val 15: Proportion = 0.2, Weight = 2, Value Contribution = 3
+
+62
