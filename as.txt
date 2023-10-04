@@ -1,0 +1,40 @@
+Job created A | deadline = 2 | profit = 100
+Job created B | deadline = 1 | profit = 19
+Job created C | deadline = 2 | profit = 27
+Job created D | deadline = 1 | profit = 25
+Job created E | deadline = 3 | profit = 15
+
+Step 1 - sorting the jobs in descending order based on their profit values:
+
+100 27 25 19 15 
+
+choose jobs based on whether the slot is filled or not.
+
+At job A deadline is 2
+free slot found 1
+value present is False
+since slot[1] is false, we choose job A
+
+At job C deadline is 2
+free slot found 1
+value present is True
+free slot found 0
+value present is False
+since slot[0] is false, we choose job C
+
+At job D deadline is 1
+free slot found 0
+value present is True
+
+At job B deadline is 1
+free slot found 0
+value present is True
+
+At job E deadline is 3
+free slot found 2
+value present is False
+since slot[2] is false, we choose job E
+
+A
+C
+E
