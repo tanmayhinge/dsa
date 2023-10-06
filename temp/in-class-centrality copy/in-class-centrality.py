@@ -9,41 +9,64 @@ def ba(n, p, m, m0):
     
     for i in range(10):
         G = nx.barabasi_albert_graph(n, m)
-        ba_closeness.append(nx.closeness_centrality(G)) 
-        ba_katz.append(nx.katz_centrality_numpy(G))
-        ba_pagerank.append(nx.pagerank(G))
-    
-    print(ba_closeness)
+        ba_closeness.extend(list(nx.closeness_centrality(G).values()))
+        ba_katz.extend(list(nx.katz_centrality_numpy(G).values()))
+        ba_pagerank.extend(list(nx.pagerank(G).values()))
 
-    plt.figure(figsize=(12, 4))
 
-    plt.subplot(1, 3, 1)
     step=10
-    plt.plot(range(1, len(ba_closeness))[::step], list(ba_closeness)[::step])
-    plt.xlabel('Closeness Centrality')
-    plt.ylabel('Frequency')
-    plt.legend()
-    plt.title('Closeness Centrality')
-
-    plt.subplot(1, 3, 2)
-    plt.plot(range(1, len(ba_katz) + 1)[::step], list(ba_katz)[::step])
-    plt.xlabel('Katz Centrality')
-    plt.ylabel('Frequency')
-    plt.legend()
-    plt.title('Katz Centrality')
-
-    plt.subplot(1, 3, 3)
-    plt.plot(range(1, len(ba_pagerank) + 1)[::step], list(ba_pagerank)[::step])
-    plt.xlabel('PageRank Centrality')
-    plt.ylabel('Frequency')
-    plt.legend()
-    plt.title('PageRank Centrality')
-
+    plt.plot(range(1, len(ba_closeness) + 1)[::step], list(ba_closeness)[::step])
+    plt.xlabel('Nodes')
+    plt.ylabel('Closeness Centrality')
+    plt.title('Closeness Centrality for Nodes')
     plt.show()
 
-def er(n, p, m, m0, num_graphs=10):
-    pass
 
+    plt.plot(range(1, len(ba_katz) + 1)[::step], list(ba_katz)[::step])
+    plt.xlabel('Nodes')
+    plt.ylabel('Katz Centrality')
+    plt.title('Katz Centrality for Nodes')
+    plt.show()
+
+
+    plt.plot(range(1, len(ba_pagerank) + 1)[::step], list(ba_pagerank)[::step])
+    plt.xlabel('Nodes')
+    plt.ylabel('PageRank Centrality')
+    plt.title('PageRank Centrality for Nodes')
+    plt.show()
+
+def er(n, p, m, m0):
+    ba_closeness = []
+    ba_katz = []
+    ba_pagerank = []
+    
+    for i in range(10):
+        G = nx.erdos_renyi_graph(n, m)
+        ba_closeness.extend(list(nx.closeness_centrality(G).values()))
+        ba_katz.extend(list(nx.katz_centrality_numpy(G).values()))
+        ba_pagerank.extend(list(nx.pagerank(G).values()))
+
+
+    step=10
+    plt.plot(range(1, len(ba_closeness) + 1)[::step], list(ba_closeness)[::step])
+    plt.xlabel('Nodes')
+    plt.ylabel('Closeness Centrality')
+    plt.title('Closeness Centrality for Nodes')
+    plt.show()
+
+
+    plt.plot(range(1, len(ba_katz) + 1)[::step], list(ba_katz)[::step])
+    plt.xlabel('Nodes')
+    plt.ylabel('Katz Centrality')
+    plt.title('Katz Centrality for Nodes')
+    plt.show()
+
+
+    plt.plot(range(1, len(ba_pagerank) + 1)[::step], list(ba_pagerank)[::step])
+    plt.xlabel('Nodes')
+    plt.ylabel('PageRank Centrality')
+    plt.title('PageRank Centrality for Nodes')
+    plt.show()
 
 def dataset1():
     edgelist_file = "/Users/tanmayhinge/fall-2023/651/in-class-centrality/d1.txt"
@@ -144,6 +167,6 @@ if __name__ == "__main__":
     p = 0.1
     m = 3
     m0 = 3
-    # er(n, p, m, m0)
+    er(n, p, m, m0)
     ba(n, p, m, m0)
 
