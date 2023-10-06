@@ -53,7 +53,7 @@ vector<Job> jobSequencing(vector<Job> jobs, int n)
             {
                 cout << "since slot[" << j << "] is false, ";
                 cout << "we choose job " << i.jobName << endl;
-                ret.push_back(i);
+                ret[j]= i;
                 slots[j] = true;
                 break;
             }
