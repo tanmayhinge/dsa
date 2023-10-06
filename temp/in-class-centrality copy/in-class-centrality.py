@@ -8,7 +8,7 @@ def ba(n, p, m, m0):
     ba_pagerank = []
     
     for i in range(10):
-        G = nx.barabasi_albert_graph(n, m)
+        G = nx.barabasi_albert_graph(n, m0)
         ba_closeness.extend(list(nx.closeness_centrality(G).values()))
         ba_katz.extend(list(nx.katz_centrality_numpy(G).values()))
         ba_pagerank.extend(list(nx.pagerank(G).values()))
@@ -41,7 +41,7 @@ def er(n, p, m, m0):
     ba_pagerank = []
     
     for i in range(10):
-        G = nx.erdos_renyi_graph(n, m)
+        G = nx.erdos_renyi_graph(n, p=p)
         ba_closeness.extend(list(nx.closeness_centrality(G).values()))
         ba_katz.extend(list(nx.katz_centrality_numpy(G).values()))
         ba_pagerank.extend(list(nx.pagerank(G).values()))
