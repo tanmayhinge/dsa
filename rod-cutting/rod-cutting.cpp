@@ -32,6 +32,7 @@ void printOptimalCut(vector<vector<int> >& sizes, vector<vector<int> >& decompos
         cout << endl;
     }
 }
+
 int rod_cutting(int arr[], int n)
 {
     int matrix[11][11] = {0};
@@ -98,7 +99,7 @@ int rod_cutting(int arr[], int n)
 
 int main()
 {
-    int arr[] = {0, 5, 10, 0, 12, 18, 0, 22, 25, 30};
+    int arr[] = {2, 3, 8, 5, 4};
     int n = sizeof(arr) / sizeof(arr[0]);
     cout << rod_cutting(arr, n);
     return 0;
